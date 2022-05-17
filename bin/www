@@ -1,0 +1,27 @@
+const env = process.env.NODE_ENV || 'development';
+const path = require('path');
+const http = require('http');
+const nconf = require('nconf');
+
+const logger = require('../src/common/helpers/logger.js');
+
+nconf
+  .argv()
+  .env()
+  .file({
+    file: path.join(
+      process.cwd(),
+      `/common/config/environments/${env}.config.json`
+    ),
+  });
+
+logger.info(`Load configuration in mode: ${env}`);
+
+const app = require('../src/app');
+const port = 8000;
+
+const server = http.createServer(app);
+
+server.listen(port, () => {
+  logger.info(`The server is running at localhost:${port}`);
+});

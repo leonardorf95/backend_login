@@ -1,0 +1,48 @@
+{
+  "name": "backend_login",
+  "version": "1.0.0",
+  "description": "Ejemplo de backend implementando nodejs, postgres, jwt, roles, passport",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "migrations:generate": "npx sequelize migration:create --name",
+    "migrations:run": "npx sequelize-cli db:migrate",
+    "migrations:revert": "npx sequelize-cli db:migrate:undo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardorf95/backend_login.git"
+  },
+  "author": "Leonardo Rangel F",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonardorf95/backend_login/issues"
+  },
+  "homepage": "https://github.com/leonardorf95/backend_login#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-promise-router": "^4.1.1",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.3",
+    "moment-timezone": "^0.5.34",
+    "morgan": "^1.10.0",
+    "nconf": "^0.12.0",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "pg": "^8.7.3",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1",
+    "shortid": "^2.2.16",
+    "underscore": "^1.13.3",
+    "uuid": "^8.3.2",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

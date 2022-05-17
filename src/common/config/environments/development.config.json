@@ -1,0 +1,32 @@
+{
+  "Database": {
+    "database": "login_app",
+    "username": "postgres",
+    "password": "Admin$01",
+    "connection": {
+      "host": "127.0.0.1",
+      "port": 5432,
+      "dialect": "postgres",
+      "pool": {
+        "max": 5,
+        "min": 0,
+        "acquire": 30000,
+        "idle": 10000
+      },
+      "dialectOptions": {
+        "useUTC": true,
+        "dateStrings": true,
+        "typeCast": true
+      }
+    }
+  },
+  "ServerFrontend": {
+    "uri": "http://localhost:3000"
+  },
+  "JwtSecret": {
+    "secret": "devmx.io"
+  },
+  "shortLink": {
+    "url": "http://localhost:8000"
+  }
+}
